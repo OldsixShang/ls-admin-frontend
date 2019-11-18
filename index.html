@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>首页-欢迎</title>
+    <link href="css/ls.admin.css" rel="stylesheet" />
+    <link href="css/ls.layout.index.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="ls-layout">
+            <aside class="ls-layout-slider">
+                <div class="header">
+                    <i class="fa fa-x fa-bar-chart"></i>
+                    <span>Ls-Admin</span>
+                </div>
+                <!--右边菜单栏-->
+                <div class="slider-menu">
+                    <div class="searchbox">
+                        <i class="fa fa-search"></i>
+                        <input type="text" placeholder="search...">
+                    </div>
+                    <ul>
+                        <li class="node-container node-container-root">
+                            <a pid="1" class="node node-root" onclick="page.expand(this)">
+                                <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
+                                <span>系统管理</span>
+                                <b class="expandable fa fa-angle-left" aria-hidden="true"></b>
+                            </a>
+                            <ul class="node-container-son">
+                                <li>
+                                    <a pid="2" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-list fa-fw" aria-hidden="true"></i>
+                                        <span>菜单管理</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a pid="7" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-shield fa-fw" aria-hidden="true"></i>
+                                        <span>权限管理</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a pid="12" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                        <span>用户管理</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a pid="17" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
+                                        <span>操作管理</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a pid="22" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-trophy fa-fw" aria-hidden="true"></i>
+                                        <span>角色管理</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="node-container node-container-root">
+                            <a pid="44" class="node node-root" onclick="page.expand(this)">
+                                <i class="fa fa-copy fa-fw" aria-hidden="true"></i>
+                                <span>日志</span>
+                                <b class="expandable fa fa-angle-left" aria-hidden="true"></b>
+                            </a>
+                            <ul class="node-container-son">
+                                <li>
+                                    <a pid="45" class="node " onclick="javascript:void(0);">
+                                        <i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>
+                                        <span>日志管理</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </aside>
+            <section class="ls-content">
+                <header class="flex flex-justify">
+                    <!--头部-->
+                    <div class="nav-left">
+                        <a class="operate-item slider" href="javascript:page.slide()"><i class="ls-icon ls-icon-spread-left"></i></a>
+                    </div>
+                    <div class="nav-right">
+                    </div>
+                </header>
+                <main>
+                    <!--内容-->
+                </main>
+            </section>
+        </section>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/ls.index.js"></script>
+</body>
+
+</html>
