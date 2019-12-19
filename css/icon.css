@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "icon";
+    src: url('//at.alicdn.com/t/font_1410565_8v9bo4sa2jt.eot?t=1576476867548');
+    /* IE9 */
+    src: url('//at.alicdn.com/t/font_1410565_8v9bo4sa2jt.eot?t=1576476867548#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQkAAsAAAAACPQAAAPXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDQAqFGIQsATYCJAMYCw4ABCAFhD0HXhuwB1FULuJkPwrjtiWcl0dKv2JylcIW+r6Qynj4fr//rX3siziqCSKfqIlEs8SQmP4qCUIjEhKR7CFBP1iIdjfX6oiMyPgjVncPrNC33XSX00mzD+69eWN5QE+DgULSfcnA9Jt0gbiCc1e/kf9zP59Xxydw7QHAMpt2RgNrgoi0BBn49gPwC/q3iF03Wz2YwMMEJu0aqt68uHusdBTiqEA8jUNV6XjESgI+jPNaxMIiXqnG04v0BS+N98dvV2KcpGbiUfeenAeVQ9dP5dEw8iB/GFWnxG0ZGedUFOJ5pPqZuuU+p27yc3zDDRWTxiWp6/tdu+sNA1+0Ln1A3EnpXx5JyIpKNCJ7mnC3PJVOQUj0fYSgH0fI9JMIhX5KrILfKsyexXv8Ae6cKymSxj4VEk3yghr8RufYfmQAl61lowQmxWURIJCpwRb9iHSj2PgWsq0tPrWL7jQI45pIRyiASWTrJAjLY9O+RgwxLgUNTDSyQZqOIckoRHppTwkaobyFTxlNGD3IoKhoREqIABmmESEFhDAaRMeYxcXdS0Fc236Cwhldxyn71+fb8/PUSAJCYjTK4FRqHap6IawdaOHyuDYJK6K6ODN6YEoWJibnQmLEL8WjC1p1ZfZgNs+IcbGiqQ+wDWsR6Fa3Vu+mbhZuN38KGlYa3X/drFreJvyCy24WK1oihtW2jonwimCARfm3sCjUPDnZrDIgIqCjqLAIzhMg6e1tfmfOJsEBurjfYyRYUgpF8vFh8gQwsrQU2Kkle0WEer95Y7KXir2ghxynhtDgNpptCZQLwgYts0o8GkQNR07Qw37lNqEVWWHsZa0GQAPaQUkTIF6V3SEaQD6E/hn2cwXsChjOcx9sG/UXARCA65mbBamiTu/jglwAfFV2PzRMw753QzHyAefITLkyKBnLypcmSlp5l1YyBJpLLqvEZVBwRegXfVXFXcmMJ7grDiRjNiAr9lEFdwyqKaegKa7CpLM2y6cs0eqiTOCMkkEY9xqSWW8gG/cWVXDvoFr1Cc24bzDpvv8Np5yIa71DRiUYgH6H2FBhZZH0zNB7DMtM8Z2kOJ6RfQwTzMZTt+8SC+QiU/xLOBexYJlyuMh9HGYZgWNK0Mg4EnH7ycRGPWlsKK/0HGJIESgAtHcgZpCC1fSiFxh/D4VKGYUjaIbyGYLp7yTEg5mxaQLqkl0klmxquvciNCeEBew3muTAReNKlEluAlx0vwQyxFhUwOnsTaiSzcoeN8vN12YbTBIvapEiR4kaLcbUhxl5HPiI4yIdqVuFkXSc8v6VOGiUHrnv3VKlBKMMrVQqAA==') format('woff2'), url('//at.alicdn.com/t/font_1410565_8v9bo4sa2jt.woff?t=1576476867548') format('woff'), url('//at.alicdn.com/t/font_1410565_8v9bo4sa2jt.ttf?t=1576476867548') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_1410565_8v9bo4sa2jt.svg?t=1576476867548#icon') format('svg');
+    /* iOS 4.1- */
+}
+
+.ls-icon {
+    font-family: "icon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ls-icon-close:before {
+    content: "\e620";
+}
+
+.ls-icon-spread-left:before {
+    content: "\e628";
+}
+
+.ls-icon-shrink-right:before {
+    content: "\e600";
+}
+
+.ls-icon-password:before {
+    content: "\e625";
+}
+
+.ls-icon-user:before {
+    content: "\e627";
+}

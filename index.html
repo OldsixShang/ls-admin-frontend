@@ -6,6 +6,7 @@
     <title>首页-欢迎</title>
     <link href="css/ls.admin.css" rel="stylesheet" />
     <link href="css/ls.layout.index.css" rel="stylesheet" />
+    <link href="css/icon.css" rel="stylesheet" />
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
@@ -32,31 +33,31 @@
                             </a>
                             <ul class="node-container-son">
                                 <li>
-                                    <a pid="2" class="node " onclick="javascript:void(0);">
+                                    <a pid="2" class="node  node-leaf" data-href="icon.html">
                                         <i class="fa fa-list fa-fw" aria-hidden="true"></i>
                                         <span>菜单管理</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="7" class="node " onclick="javascript:void(0);">
+                                    <a pid="7" class="node node-leaf" data-href="https://www.yokong.com">
                                         <i class="fa fa-shield fa-fw" aria-hidden="true"></i>
                                         <span>权限管理</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="12" class="node " onclick="javascript:void(0);">
+                                    <a pid="12" class="node node-leaf" data-href="">
                                         <i class="fa fa-user fa-fw" aria-hidden="true"></i>
                                         <span>用户管理</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="17" class="node " onclick="javascript:void(0);">
+                                    <a pid="17" class="node node-leaf" data-href="">
                                         <i class="fa fa-file-text-o fa-fw" aria-hidden="true"></i>
                                         <span>操作管理</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="22" class="node " onclick="javascript:void(0);">
+                                    <a pid="22" class="node node-leaf" data-href="">
                                         <i class="fa fa-trophy fa-fw" aria-hidden="true"></i>
                                         <span>角色管理</span>
                                     </a>
@@ -72,7 +73,7 @@
                             </a>
                             <ul class="node-container-son">
                                 <li>
-                                    <a pid="45" class="node " onclick="javascript:void(0);">
+                                    <a pid="45" class="node node-leaf" data-href="">
                                         <i class="fa fa-list-alt fa-fw" aria-hidden="true"></i>
                                         <span>日志管理</span>
                                     </a>
@@ -80,7 +81,6 @@
 
                             </ul>
                         </li>
-
                     </ul>
                 </div>
             </aside>
@@ -95,11 +95,40 @@
                 </header>
                 <main>
                     <!--内容-->
+                    <!--tabs-->
+                    <div class="ls-tab-container">
+                        <div class="ls-tab-titles flex">
+                            <div class="tab-title active" data-id="1">
+                                <span class="title">Tab1</span>
+                                <i class="ls-icon ls-icon-close op-close"></i>
+                            </div>
+                            <div class="tab-title" data-id="2">
+                                <span class="title">Tab2</span>
+                                <i class="ls-icon ls-icon-close op-close"></i>
+                            </div>
+                            <div class="tab-title" data-id="3">
+                                <span class="title">Tab3</span>
+                                <i class="ls-icon ls-icon-close op-close"></i>
+                            </div>
+                        </div>
+                        <div class="ls-tab-contents">
+                            <div class="tab-content active" data-for="1">
+                                Tab1 Content
+                            </div>
+                            <div class="tab-content" data-for="2">
+                                Tab2 Content
+                            </div>
+                            <div class="tab-content" data-for="3">
+                                Tab3 Content
+                            </div>
+                        </div>
+                    </div>
                 </main>
             </section>
         </section>
     </div>
     <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="lib/layui/layui.all.js"></script>
     <script src="js/ls.index.js"></script>
 </body>
 
