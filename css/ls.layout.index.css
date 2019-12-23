@@ -266,12 +266,21 @@
     left: 5px;
     right: 0px;
     bottom: 5px;
+    overflow: hidden;
 }
 
-.ls-tab-container .ls-tab-titles {
+.ls-tab-container .header {
     height: 36px;
     background: rgba(255, 255, 255, .8);
     box-shadow: 0 0 6px rgba(196, 199, 202, .35);
+}
+
+.ls-tab-container .ls-tab-titles {
+    position: absolute;
+    left: 39px;
+    right: 39px;
+    transition: all 300ms ease-in;
+    -webkit-transition: all 300ms ease-in;
 }
 
 .ls-tab-container .ls-tab-contents {
@@ -280,6 +289,7 @@
     left: 5px;
     right: 5px;
     bottom: 5px;
+    overflow: hidden;
 }
 
 .ls-tab-container .ls-tab-titles .tab-title {
@@ -290,6 +300,36 @@
     min-width: 30px;
     max-width: 200px;
     overflow: hidden;
+    position: relative;
+    border-right: 1px solid #f5f5f5;
+}
+
+.ls-tab-container .ls-tab-titles .tab-title .ls-icon-home {
+    font-size: 20px;
+}
+
+.ls-tab-container .ls-tab-titles .tab-title::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    display: block;
+    height: 1px;
+    width: 0%;
+    margin: auto;
+    background: rgba(29, 124, 227, 0.95);
+    /* box-shadow: 0 0 6px rgba(29, 124, 227, 0.35); */
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    z-index: 7;
+}
+
+.ls-tab-container .ls-tab-titles .tab-title.active::after {
+    width: 100%;
+}
+
+.ls-tab-container .ls-tab-titles .tab-title:hover::after {
+    width: 100%;
 }
 
 .ls-tab-container .ls-tab-titles .tab-title:hover {
@@ -323,4 +363,43 @@
 
 .ls-tab-container .ls-tab-contents .tab-content.active {
     display: block!important;
+}
+
+.tab-operate {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 6px rgba(196, 199, 202, 0.35);
+    z-index: 8;
+}
+
+.tab-operate .fa:hover {
+    background: rgba(238, 238, 238, .6);
+    cursor: pointer;
+}
+
+.tab-operate.tab-operate-left {
+    left: 0;
+}
+
+.tab-operate.tab-operate-right {
+    right: 0;
+}
+
+.tab-operate .fa {
+    color: #666;
+    font-size: 22px;
+    line-height: 36px;
+    width: 38px;
+    display: inline-block;
+}
+
+.tab-operate-left .fa {
+    border-right: 1px solid #e6e6e6;
+}
+
+.tab-operate-right .fa {
+    border-left: 1px solid #e6e6e6;
 }

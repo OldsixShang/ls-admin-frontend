@@ -1,0 +1,1705 @@
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    -moz-border-radius: 0 0 0 0 !important;
+    -webkit-border-radius: 0 0 0 0 !important;
+    background: none !important;
+    border: 0 !important;
+    bottom: auto !important;
+    float: none !important;
+    height: auto !important;
+    left: auto !important;
+    line-height: 1.1em !important;
+    margin: 0 !important;
+    outline: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    right: auto !important;
+    text-align: left !important;
+    top: auto !important;
+    vertical-align: baseline !important;
+    width: auto !important;
+    box-sizing: content-box !important;
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    font-size: 1em !important;
+    min-height: inherit !important;
+    min-height: auto !important
+}
+
+.syntaxhighlighter {
+    width: 100% !important;
+    margin: 1em 0 1em 0 !important;
+    position: relative !important;
+    overflow: auto !important;
+    font-size: 1em !important
+}
+
+.syntaxhighlighter.source {
+    overflow: hidden !important
+}
+
+.syntaxhighlighter .bold {
+    font-weight: bold !important
+}
+
+.syntaxhighlighter .italic {
+    font-style: italic !important
+}
+
+.syntaxhighlighter .line {
+    white-space: pre !important
+}
+
+.syntaxhighlighter table {
+    width: 100% !important
+}
+
+.syntaxhighlighter table caption {
+    text-align: left !important;
+    padding: .5em 0 .5em 1em !important
+}
+
+.syntaxhighlighter table td.code {
+    width: 100% !important
+}
+
+.syntaxhighlighter table td.code .container {
+    position: relative !important
+}
+
+.syntaxhighlighter table td.code .container textarea {
+    box-sizing: border-box !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    background: #fff !important;
+    padding-left: 1em !important;
+    overflow: hidden !important;
+    white-space: pre !important
+}
+
+.syntaxhighlighter table td.gutter .line {
+    text-align: right !important;
+    padding: 0 .5em 0 1em !important
+}
+
+.syntaxhighlighter table td.code .line {
+    padding: 0 1em !important
+}
+
+.syntaxhighlighter.nogutter td.code .container textarea,
+.syntaxhighlighter.nogutter td.code .line {
+    padding-left: 0 !important
+}
+
+.syntaxhighlighter.show {
+    display: block !important
+}
+
+.syntaxhighlighter.collapsed table {
+    display: none !important
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+    padding: .1em .8em 0 .8em !important;
+    font-size: 1em !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important
+}
+
+.syntaxhighlighter.collapsed .toolbar span {
+    display: inline !important;
+    margin-right: 1em !important
+}
+
+.syntaxhighlighter.collapsed .toolbar span a {
+    padding: 0 !important;
+    display: none !important
+}
+
+.syntaxhighlighter.collapsed .toolbar span a.expandSource {
+    display: inline !important
+}
+
+.syntaxhighlighter .toolbar {
+    position: absolute !important;
+    right: 1px !important;
+    top: 1px !important;
+    width: 11px !important;
+    height: 11px !important;
+    font-size: 10px !important;
+    z-index: 10 !important
+}
+
+.syntaxhighlighter .toolbar span.title {
+    display: inline !important
+}
+
+.syntaxhighlighter .toolbar a {
+    display: block !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    padding-top: 1px !important
+}
+
+.syntaxhighlighter .toolbar a.expandSource {
+    display: none !important
+}
+
+.syntaxhighlighter.ie {
+    font-size: .9em !important;
+    padding: 1px 0 1px 0 !important
+}
+
+.syntaxhighlighter.ie .toolbar {
+    line-height: 8px !important
+}
+
+.syntaxhighlighter.ie .toolbar a {
+    padding-top: 0 !important
+}
+
+.syntaxhighlighter.printing .line.alt1 .content,
+.syntaxhighlighter.printing .line.alt2 .content,
+.syntaxhighlighter.printing .line.highlighted .number,
+.syntaxhighlighter.printing .line.highlighted.alt1 .content,
+.syntaxhighlighter.printing .line.highlighted.alt2 .content {
+    background: none !important
+}
+
+.syntaxhighlighter.printing .line .number {
+    color: #bbb !important
+}
+
+.syntaxhighlighter.printing .line .content {
+    color: #000 !important
+}
+
+.syntaxhighlighter.printing .toolbar {
+    display: none !important
+}
+
+.syntaxhighlighter.printing a {
+    text-decoration: none !important
+}
+
+.syntaxhighlighter.printing .plain,
+.syntaxhighlighter.printing .plain a {
+    color: #000 !important
+}
+
+.syntaxhighlighter.printing .comments,
+.syntaxhighlighter.printing .comments a {
+    color: #008200 !important
+}
+
+.syntaxhighlighter.printing .string,
+.syntaxhighlighter.printing .string a {
+    color: rgb(86, 156, 214) !important
+}
+
+.syntaxhighlighter.printing .keyword {
+    color: #069 !important;
+    font-weight: bold !important
+}
+
+.syntaxhighlighter.printing .preprocessor {
+    color: #808080 !important
+}
+
+.syntaxhighlighter.printing .variable {
+    color: #a70 !important
+}
+
+.syntaxhighlighter.printing .value {
+    color: #090 !important
+}
+
+.syntaxhighlighter.printing .functions {
+    color: #ff1493 !important
+}
+
+.syntaxhighlighter.printing .constants {
+    color: #06c !important
+}
+
+.syntaxhighlighter.printing .script {
+    font-weight: bold !important
+}
+
+.syntaxhighlighter.printing .color1,
+.syntaxhighlighter.printing .color1 a {
+    color: #808080 !important
+}
+
+.syntaxhighlighter.printing .color2,
+.syntaxhighlighter.printing .color2 a {
+    color: #ff1493 !important
+}
+
+.syntaxhighlighter.printing .color3,
+.syntaxhighlighter.printing .color3 a {
+    color: #f00 !important
+}
+
+.syntaxhighlighter.printing .break,
+.syntaxhighlighter.printing .break a {
+    color: #000 !important
+}
+
+.syntaxhighlighter {
+    background-color: #fff !important
+}
+
+.syntaxhighlighter .line.alt1 {
+    background-color: #fff !important
+}
+
+.syntaxhighlighter .line.highlighted.alt1,
+.syntaxhighlighter .line.highlighted.alt2 {
+    background-color: #e0e0e0 !important
+}
+
+.syntaxhighlighter .line.highlighted.number {
+    color: #000 !important
+}
+
+.syntaxhighlighter table caption {
+    color: #000 !important
+}
+
+.syntaxhighlighter .gutter {
+    color: #afafaf !important
+}
+
+.syntaxhighlighter .gutter .line {
+    border-right: 3px solid #6ce26c !important
+}
+
+.syntaxhighlighter .gutter .line.highlighted {
+    background-color: #6ce26c !important;
+    color: #fff !important
+}
+
+.syntaxhighlighter.printing .line .content {
+    border: none !important
+}
+
+.syntaxhighlighter.collapsed {
+    overflow: visible !important
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+    color: rgb(86, 156, 214) !important;
+    background: #fff !important;
+    border: 1px solid #6ce26c !important
+}
+
+.syntaxhighlighter.collapsed .toolbar a {
+    color: rgb(86, 156, 214) !important
+}
+
+.syntaxhighlighter.collapsed .toolbar a:hover {
+    color: #f00 !important
+}
+
+.syntaxhighlighter .toolbar {
+    color: #fff !important;
+    background: #6ce26c !important;
+    border: none !important
+}
+
+.syntaxhighlighter .toolbar a {
+    color: #fff !important
+}
+
+.syntaxhighlighter .toolbar a:hover {
+    color: #000 !important
+}
+
+.syntaxhighlighter .plain,
+.syntaxhighlighter .plain a {
+    color: #000 !important
+}
+
+.syntaxhighlighter .comments,
+.syntaxhighlighter .comments a {
+    color: #008200 !important
+}
+
+.syntaxhighlighter .string,
+.syntaxhighlighter .string a {
+    color: rgb(86, 156, 214) !important
+}
+
+.syntaxhighlighter .keyword {
+    color: #069 !important
+}
+
+.syntaxhighlighter .preprocessor {
+    color: #808080 !important
+}
+
+.syntaxhighlighter .variable {
+    color: #a70 !important
+}
+
+.syntaxhighlighter .value {
+    color: #090 !important
+}
+
+.syntaxhighlighter .functions {
+    color: #ff1493 !important
+}
+
+.syntaxhighlighter .constants {
+    color: #06c !important
+}
+
+.syntaxhighlighter .script {
+    font-weight: bold !important;
+    color: #069 !important;
+    background-color: none !important
+}
+
+.syntaxhighlighter .color1,
+.syntaxhighlighter .color1 a {
+    color: #808080 !important
+}
+
+.syntaxhighlighter .color2,
+.syntaxhighlighter .color2 a {
+    color: #ff1493 !important
+}
+
+.syntaxhighlighter .color3,
+.syntaxhighlighter .color3 a {
+    color: #f00 !important
+}
+
+.syntaxhighlighter .keyword {
+    font-weight: bold !important
+}
+
+.syntaxhighlighter code {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap
+}
+
+.syntaxhighlighter .line {
+    white-space: normal !important;
+    line-height: 1.8em !important
+}
+
+.syntaxhighlighter code {
+    line-height: 1.8em !important
+}
+
+.syntaxhighlighter .toolbar {
+    display: none
+}
+
+.syntaxhighlighter.collapsed .toolbar {
+    display: block;
+    background: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+    padding: .5em .8em .5em .8em !important
+}
+
+.syntaxhighlighter table td.code {
+    width: auto !important
+}
+
+.syntaxhighlighter .line.alt2 {
+    background-color: #f4f4f4 !important
+}
+
+.syntaxhighlighter .gutter {
+    width: 35px !important
+}
+
+.syntaxhighlighter .gutter .line {
+    border-right: 2px solid #6ce26c !important
+}
+
+.syntaxhighlighter table td.gutter .line {
+    padding: 0 .5em 0 .5em !important;
+    text-align: right !important
+}
+
+.syntaxhighlighter .keyword {
+    font-weight: normal !important;
+    color: rgb(86, 156, 214) !important
+}
+
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    font-size: 12px !important
+}
+
+.sh-gutter .line,
+.sh-gutter code {
+    white-space: nowrap !important
+}
+
+body {
+    font-family: Helvetica, Verdana, Arial, sans-serif
+}
+
+input[type=button] {
+    -webkit-appearance: button
+}
+
+img {
+    border: 0
+}
+
+.ThumbNail img {
+    width: 100%
+}
+
+.blog_topic {
+    margin-top: 10px;
+    margin-left: 2em
+}
+
+#blog_post_info_block {
+    margin-top: 20px
+}
+
+#BlogPostCategory {
+    margin-bottom: 10px
+}
+
+#EntryTag {
+    margin-top: 0 !important
+}
+
+.topicListFooter {
+    text-align: right;
+    margin-right: 10px;
+    margin-top: 10px
+}
+
+#divRefreshComments {
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 12px
+}
+
+.commentTextBox {
+    Width: 480px;
+    height: 220px
+}
+
+.commenttb {
+    width: 320px
+}
+
+.tb_comment_name {
+    width: 200px
+}
+
+#MyIng {
+    margin-top: 5px
+}
+
+.ing_title {
+    font-weight: bold;
+    text-align: center
+}
+
+.ing_body {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    word-break: break-all
+}
+
+.ing_date {
+    text-align: center;
+    color: #808080;
+    font-size: 11px
+}
+
+.ing_footer {
+    text-align: right;
+    margin-right: 5px
+}
+
+#divNewMsg {
+    margin-top: 2px;
+    text-align: center
+}
+
+.commentform table td input {
+    margin: 2px auto
+}
+
+span.cnblogs_code {
+    padding: 3px
+}
+
+.cnblogs_code div {
+    background-color: #f5f5f5
+}
+
+.cnblogs_code pre {
+    font-family: Courier New !important;
+    font-size: 12px !important;
+    word-wrap: break-word;
+    white-space: pre-wrap
+}
+
+.cnblogs_code span {
+    font-family: Courier New !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important
+}
+
+.cnblogs_code_Collapse {
+    border-right: #808080 1px solid;
+    border-top: #808080 1px solid;
+    border-left: #808080 1px solid;
+    border-bottom: #808080 1px solid;
+    background-color: #fff;
+    padding: 2px
+}
+
+.cnblogs_code_collapse {
+    border-right: #808080 1px solid;
+    border-top: #808080 1px solid;
+    border-left: #808080 1px solid;
+    border-bottom: #808080 1px solid;
+    background-color: #fff;
+    padding: 2px
+}
+
+.cnblogs_code_hide {
+    display: none
+}
+
+.code_img_closed {
+    vertical-align: middle;
+    padding-right: 5px
+}
+
+.code_img_opened {
+    vertical-align: middle;
+    padding-right: 5px
+}
+
+.cnblogs_code_open {
+    margin-top: 5px
+}
+
+.codeLineNumber {
+    -moz-user-select: none;
+    color: rgb(87, 166, 74);
+    padding-right: 10px
+}
+
+.cnblogs_code ol {
+    margin-left: 0;
+    color: rgb(87, 166, 74)
+}
+
+.cnblogs_code ol li {
+    list-style-image: none
+}
+
+.cnblogs_code ol li span {
+    color: #000
+}
+
+.cnblogs_code_toolbar a:hover,
+.cnblogs_code_toolbar a:link,
+.cnblogs_code_toolbar a:visited,
+.cnblogs_code_toolbar a:active,
+.cnblogs_code_toolbar a:link img,
+.cnblogs_code_toolbar a:visited img {
+    background-color: #f5f5f5 !important;
+    border: none !important
+}
+
+.desc_img {
+    float: right;
+    max-height: 200px
+}
+
+.MsoNormal {
+    font-size: 13px;
+    line-height: 150%
+}
+
+.div_my_zzk {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.input_my_zzk {
+    width: 100px;
+    vertical-align: middle;
+    height: 20px
+}
+
+input.btn_my_zzk {
+    vertical-align: middle;
+    height: 22px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+pre {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word
+}
+
+.divPostCommentBox {
+    float: left;
+    width: 500px
+}
+
+.CommentBoxNav {
+    width: 100px;
+    float: right;
+    margin-top: 20px;
+    line-height: 120%;
+    font-size: 12px
+}
+
+.comment_pager {
+    text-align: left;
+    padding-bottom: 5px
+}
+
+.comment_pager_current {
+    color: #f00
+}
+
+.dp-highlighter {
+    font-family: "Consolas", "Courier New", Courier, mono, serif;
+    font-size: 12px;
+    overflow: auto;
+    margin: 18px 0 18px 0 !important;
+    word-break: break-word
+}
+
+.dp-highlighter ol,
+.dp-highlighter ol li,
+.dp-highlighter ol li span {
+    margin: 0;
+    padding: 0;
+    border: none
+}
+
+.dp-highlighter a,
+.dp-highlighter a:hover {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0
+}
+
+.dp-highlighter ol {
+    list-style: decimal;
+    background-color: #fff;
+    margin: 0 0 1px 45px !important;
+    padding: 0 !important;
+    color: #5c5c5c
+}
+
+.dp-highlighter.nogutter ol,
+.dp-highlighter.nogutter ol li {
+    list-style: none !important;
+    margin-left: 0 !important
+}
+
+.dp-highlighter ol li,
+.dp-highlighter .columns div {
+    list-style: decimal-leading-zero;
+    list-style-position: outside !important;
+    border-left: 3px solid #6ce26c;
+    background-color: #f8f8f8;
+    color: #5c5c5c;
+    padding: 0 3px 0 10px !important;
+    margin: 0 !important;
+    line-height: 1.6
+}
+
+.dp-highlighter.nogutter ol li,
+.dp-highlighter.nogutter .columns div {
+    border: 0
+}
+
+.dp-highlighter .columns {
+    background-color: #f8f8f8;
+    color: #808080;
+    overflow: hidden;
+    width: 100%
+}
+
+.dp-highlighter .columns div {
+    padding-bottom: 5px
+}
+
+.dp-highlighter ol li.alt {
+    background-color: #fff;
+    color: inherit
+}
+
+.dp-highlighter ol li span {
+    color: #000;
+    background-color: inherit
+}
+
+.dp-highlighter.collapsed ol {
+    margin: 0
+}
+
+.dp-highlighter.collapsed ol li {
+    display: none
+}
+
+.dp-highlighter.printing {
+    border: none
+}
+
+.dp-highlighter.printing .tools {
+    display: none !important
+}
+
+.dp-highlighter.printing li {
+    display: list-item !important
+}
+
+.dp-highlighter .tools {
+    padding: 3px 8px 3px 10px;
+    font: 9px Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: #c0c0c0;
+    background-color: #f8f8f8;
+    padding-bottom: 10px;
+    border-left: 3px solid #6ce26c
+}
+
+.dp-highlighter.nogutter .tools {
+    border-left: 0
+}
+
+.dp-highlighter.collapsed .tools {
+    border-bottom: 0
+}
+
+.dp-highlighter .tools a {
+    font-size: 9px;
+    color: #a0a0a0;
+    background-color: inherit;
+    text-decoration: none;
+    margin-right: 10px
+}
+
+.dp-highlighter .tools a:hover {
+    color: #f00;
+    background-color: inherit;
+    text-decoration: underline
+}
+
+.dp-about {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0
+}
+
+.dp-about table {
+    width: 100%;
+    height: 100%;
+    font-size: 11px;
+    font-family: Tahoma, Verdana, Arial, sans-serif !important
+}
+
+.dp-about td {
+    padding: 10px;
+    vertical-align: top
+}
+
+.dp-about .copy {
+    border-bottom: 1px solid #aca899;
+    height: 95%
+}
+
+.dp-about .title {
+    color: #f00;
+    background-color: inherit;
+    font-weight: bold
+}
+
+.dp-about .para {
+    margin: 0 0 4px 0
+}
+
+.dp-about .footer {
+    background-color: #eceadb;
+    color: #333;
+    border-top: 1px solid #fff;
+    text-align: right
+}
+
+.dp-about .close {
+    font-size: 11px;
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+    background-color: #eceadb;
+    color: #333;
+    width: 60px;
+    height: 22px
+}
+
+.dp-highlighter .comment,
+.dp-highlighter .comments {
+    color: #008200;
+    background-color: inherit
+}
+
+.dp-highlighter .string {
+    color: rgb(86, 156, 214);
+    background-color: inherit
+}
+
+.dp-highlighter .keyword {
+    color: #069;
+    font-weight: bold;
+    background-color: inherit
+}
+
+.dp-highlighter .preprocessor {
+    color: #808080;
+    background-color: inherit
+}
+
+a.ing_lnk:link,
+a.ing_lnk:active,
+a.ing_lnk:visited {
+    color: #808080;
+    text-decoration: none;
+    border: 0
+}
+
+.itnews {
+    line-height: 150%
+}
+
+.job_offer_list {
+    line-height: 150%
+}
+
+blockquote {
+    background: none;
+    border: 2px solid #efefef;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#cnblogs_post_body blockquote ul {
+    margin-left: 25px
+}
+
+.c_ad_block {
+    margin-top: 10px;
+    line-height: 1.5
+}
+
+#grade_flag {
+    font-size: 12px
+}
+
+div.commentform textarea.comment_textarea {
+    line-height: 1.6
+}
+
+.c_b_p_desc {
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 1.5
+}
+
+.c_b_p_desc_readmore {
+    padding-left: 5px
+}
+
+.c_b_p_link_desc {
+    margin-top: 2px;
+    word-break: break-word
+}
+
+.cnblogs-markdown .hljs,
+.cnblogs-post-body .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: .5em;
+    background: #fff;
+    color: rgb(220, 220, 220);
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-variable {
+    color: rgb(87, 166, 74);
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name,
+.hljs-tag {
+    color: rgb(86, 156, 214);
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-attribute,
+.hljs-literal,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-addition {
+    color: rgb(214, 157, 133);
+}
+
+.hljs-deletion,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-meta {
+    color: #2b91af
+}
+
+.hljs-doctag {
+    color: #808080
+}
+
+.hljs-attr {
+    color: rgba(54, 177, 226, 0.98);
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+    color: #00b0e8
+}
+
+.hljs-emphasis {
+    font-style: italic
+}
+
+.hljs-strong {
+    font-weight: bold
+}
+
+.cnblogs-markdown code,
+.cnblogs-post-body code {
+    font-family: "Courier New", sans-serif !important;
+    font-size: 12px !important;
+    line-height: 20px;
+    background-color: rgb(30, 30, 30)!important;
+    border: 1px solid #ccc !important;
+    padding: 0 5px !important;
+    border-radius: 3px !important;
+    line-height: 1.8;
+    margin: 1px 5px;
+    vertical-align: middle;
+    display: inline-block;
+    color: rgb(214, 157, 133);
+}
+
+.cnblogs-markdown pre code,
+.cnblogs-post-body pre code {
+    display: block;
+    margin: auto;
+    vertical-align: auto;
+    height: auto;
+    line-height: 1.5;
+    padding: 5px !important
+}
+
+.cnblogs-markdown .hljs,
+.cnblogs-post-body .hljs {
+    font-family: "Courier New", sans-serif!important;
+    font-size: 12px !important;
+    line-height: 1.5!important;
+    padding: 5px !important
+}
+
+.cnblogs-markdown pre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background: black; */
+}
+
+html {
+    color: #000;
+    overflow-y: scroll;
+    background: #fff
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+form,
+th,
+td {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 12px/1.5 Tahoma, Arial, Helvetica, sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+    font-style: normal
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: "Courier New", Courier, monospace
+}
+
+small {
+    font-size: 12px
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #1d7ce3;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1d7ce3
+}
+
+abbr[title],
+acronym[title] {
+    border-bottom: 1px dotted;
+    cursor: help
+}
+
+q:before,
+q:after {
+    content: ''
+}
+
+:focus {
+    outline: 0
+}
+
+legend {
+    color: #000
+}
+
+fieldset,
+img {
+    border: none
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+img {
+    -ms-interpolation-mode: bicubic
+}
+
+article,
+aside,
+dialog,
+footer,
+header,
+hground,
+section,
+footer,
+nav,
+figure,
+menu {
+    display: block
+}
+
+#navigator,
+#blogTitle,
+#main,
+#footer {
+    width: 1020px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#header {
+    height: 40px;
+    width: 100%;
+    background-color: rgba(29, 124, 227, .98);
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgba(29, 124, 227, .98);
+    box-shadow: 1px 0 15px rgba(0, 21, 61, .1);
+    -webkit-transition: width 300ms ease;
+}
+
+#main {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+#mainContent {
+    width: 760px;
+    background: #fff;
+    box-shadow: 1px 0 15px rgba(0, 21, 61, .1);
+    -webkit-transition: width 300ms ease;
+    border-radius: 4px;
+    -moz-border-radius: 6px;
+    -web-kit-shadow: 6px;
+    float: left;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#sideBar {
+    width: 250px;
+    display: inline-block;
+    color: #2d2d2d;
+    margin-left: 10px;
+}
+
+#sidebar_news,
+#blog-calendar {
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: #fff;
+    box-shadow: 1px 0 15px rgba(0, 21, 61, .1);
+    margin-top: 0;
+}
+
+#blog-news,
+#blog-calendar {
+    padding: 14px;
+}
+
+#footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #000;
+    font-size: 12px
+}
+
+#navList ul {
+    padding: 0;
+    margin: 0;
+}
+
+#navList li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+#navList li {
+    margin-bottom: -3px;
+}
+
+#navList li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+    line-height: 40px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+#navList li a:hover:after {
+    width: 100%;
+}
+
+#navList li a:after {
+    content: ' ';
+    margin: auto;
+    display: block;
+    background: rgba(0, 0, 0, .1);
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    width: 0;
+    border-bottom: 3px solid #fff;
+    transition: all 400ms ease;
+    -webkit-transition: all 400ms ease;
+    z-index: -1;
+}
+
+.blogStats {
+    color: rgba(251, 251, 251, 1);
+    font-size: 12px;
+    text-align: right;
+    line-height: 40px;
+}
+
+#Header1_HeaderTitle {
+    color: #fff
+}
+
+#Header1_HeaderTitle:hover {
+    text-decoration: none
+}
+
+.day {
+    background: #fff;
+    padding: 32px
+}
+
+.postTitle,
+.postTitle2,
+.entrylistPosttitle {
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 64px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.postTitle a,
+.postTitle2 a,
+.entrylistPosttitle a {
+    color: #333
+}
+
+.postTitle2 {
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+}
+
+.postTitle2:before {
+    content: " ";
+    background: rgba(29, 124, 227, .98);
+    display: inline-block;
+    width: 4px;
+    height: 5px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.postTitle2:hover {
+    font-size: 21px;
+    line-height: 30px;
+}
+
+.postTitle2:hover:before {
+    height: 20px;
+}
+
+.post-title a:visited,
+.postTitle2 a:link,
+.postTitle2 a:visited,
+.entrylistPosttitle a:link,
+.entrylistPosttitle a:visited {
+    color: #666
+}
+
+.postTitle a:hover,
+.postTitl2 a:hover,
+.entrylistPosttitle a:hover {
+    color: #666;
+    text-decoration: none
+}
+
+.postBody,
+.postCon,
+.entrylistPostSummary {
+    clear: both;
+    margin-top: 20px;
+}
+
+.postBody,
+.postCon,
+.entrylistPostSummary {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.postCon .c_b_p_desc {
+    line-height: 1.6;
+    color: #666;
+}
+
+.postCon .c_b_p_desc_readmore {
+    color: #1d7ce3;
+}
+
+.postCon h1,
+.postCon h2,
+.postCon h3,
+.postCon h4,
+.postCon h5,
+.postCon h6 {
+    font-weight: bold;
+    line-height: 1.8
+}
+
+.postBody h1,
+.postCon h1 {
+    font-size: 20px
+}
+
+.postBody h2,
+.postCon h2 {
+    font-size: 18px
+}
+
+.postBody h3,
+.postCon h3 {
+    font-size: 16px
+}
+
+.postBody h4,
+.postCon h4 {
+    font-size: 14px
+}
+
+.postBody h5,
+.postCon h5 {
+    font-size: 14px
+}
+
+.postBody h6,
+.postCon h6 {
+    font-size: 14px
+}
+
+.postBody dd,
+.postCon dd {
+    padding-left: 2em
+}
+
+.postBody ul,
+.postCon ul {
+    list-style: none;
+    margin-left: 20px
+}
+
+.postBody ul li,
+.postCon ul li {
+    list-style: inside disc
+}
+
+.postBody dt,
+.postCon dt {
+    font-weight: bold;
+    padding: 6px 0;
+    clear: both
+}
+
+.postBody ol,
+.postCon ol {
+    list-style: none;
+    margin-left: 20px
+}
+
+.postBody blockquote,
+.postCon blockquote {
+    margin: 0 auto;
+    padding: 8px 0 8px 4px;
+    color: #666;
+    border: 1px solid #eee;
+    background: #fbfbfb;
+    border-left: 4px solid #ddd;
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+.dayTitle,
+.postDesc {
+    font-size: 12px;
+    color: #999
+}
+
+.postDesc,
+.postDesc2,
+.entrylistItemPostDesc {
+    border-bottom: 1px dashed #e8e7d0;
+    text-align: right;
+    margin: 20px 0;
+    padding: 5px 0
+}
+
+.dayTitle {
+    margin-bottom: 20px;
+}
+
+.dayTitle a {
+    color: #666;
+    border: 1px solid #ddd;
+    display: block;
+    background: #fbfbfb;
+    padding: 5px 10px;
+    text-align: center;
+    width: 120px;
+    border-radius: 3px;
+}
+
+.dayTitle a:hover {
+    text-decoration: none;
+    background: #f5f5f5;
+}
+
+.topicListFooter {
+    padding: 32px
+}
+
+#sideBarMain h3 {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 14px;
+    line-height: 36px;
+    /* background: rgba(29, 124, 227, .94); */
+    color: #333;
+    overflow: hidden;
+    border-top: 3px solid rgba(29, 124, 227, .98);
+    border-bottom: 1px solid #eee;
+}
+
+#sideBarMain .sidebar-block {
+    background: #fff;
+    box-shadow: 1px 0 15px rgba(0, 21, 61, .1);
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#sidebar_search_box {
+    padding: 14px;
+}
+
+.sidebar-block ul {
+    padding: 14px;
+}
+
+.sidebar-block ul li {
+    line-height: 1.8;
+}
+
+#blog-comments-placeholder,
+#divRefreshComments,
+.commentform,
+#AjaxHolder_UpdatePanel1 {
+    padding: 0 32px
+}
+
+.post {
+    padding: 32px
+}
+
+.feedbackItem {
+    border: 1px solid #e3e3e3;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #f6f6f6
+}
+
+.blog_comment_body {
+    color: #929292;
+    padding-top: 10px
+}
+
+.forFlow p {
+    margin-bottom: 18px
+}
+
+.forFlow img {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.PostList,
+.entrylistItem {
+    margin: 20px
+}
+
+.entrylistTitle,
+.PostListTitle {
+    display: none
+}
+
+#blogTitle {
+    display: none
+}
+
+.cnblogs_code img {
+    margin: 0;
+    float: left
+}
+
+.cnblogs_code_toolbar {
+    margin-top: 0
+}
+
+.code {
+    padding: 0 10px
+}
+
+h4 {
+    font-size: 16px;
+    background-color: rgba(29, 124, 227, .98);
+    margin: 0 -32px;
+    padding: 0 32px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 15px;
+}
+
+#myposts .myposts_title {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center
+}
+
+#myposts .postTitl2 {
+    border-left: none;
+    padding-left: 0;
+    padding-right: 0
+}
+
+#myposts .postTitl2 a {
+    font-size: 16px
+}
+
+#myposts .postDesc2 {
+    margin: 20px 0 20px 5px
+}
+
+#cnblogs_post_body {
+    font-size: 14px
+}
+
+#green_channel img {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+#cnblogs_post_body img {
+    max-width: 650px
+}
+
+.commentbox_main img {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+#cnblogs_post_body ol {
+    padding-left: 20px;
+}
+
+#cnblogs_post_body ul,
+#cnblogs_post_body blockquote ul {
+    margin-left: 10px;
+}

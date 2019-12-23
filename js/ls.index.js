@@ -65,13 +65,32 @@ var page = page || {};
                 $tab.find(".ls-tab-titles .tab-title.active").removeClass("active");
                 $tab.find(".ls-tab-contents .tab-content.active").removeClass("active");
                 $tabTitle.addClass("active");
+
+                // 位置调整
+                var pleft = $tab.offset().left + 39;
+                var pright = $tab.offset().left + $tab.width() - 39;
+                //console.log(pleft + ',' + pright + ',' + $tab.width());
+                var cleft = $tabTitle.offset().left;
+                var cright = cleft + $tabTitle.width() + 30; //+30  padding:15px;
+                var titlesLeft = $tabTitle.parent().data("left") || 39;
+
+                if (cleft < pleft) {
+                    titlesLeft = (titlesLeft + cleft - pleft);
+                    $tabTitle.parent().css("left", titlesLeft + "px");
+                    $tabTitle.parent().attr("data-left", titlesLeft);
+                } else if (cright > pright) {
+                    //debugger
+                    titlesLeft = (titlesLeft + pright - cright);
+                    $tabTitle.parent().css("left", titlesLeft + "px");
+                    $tabTitle.parent().attr("data-left", titlesLeft);
+                }
                 $tab_contents.find(".tab-content[data-for='" + tabId + "']").addClass('active');
             };
             // 移除Tab
             var removeTab = function($tabTitle) {
                 var tabId = $tabTitle.data("id");
                 if ($tabTitle.hasClass("active")) {
-                    debugger
+                    //debugger
                     // 切换到临近的Tab
                     if ($tabTitle.next().length) {
                         activeTab($tabTitle.next());
@@ -115,13 +134,18 @@ var page = page || {};
                     };
                     tabObj = tabObj || {};
                     tabObj = $.extend(defaults, tabObj);
+                    var $newTabTitle = $title_container.find(".tab-title[data-id='" + tabObj.id + "']");
+                    if ($newTabTitle.length) {
+                        activeTab($newTabTitle);
+                        return;
+                    }
                     // 无内容，创建内容区域
                     if (!$tab_contents.length) {
                         $tab_contents = $("<div class='ls-tab-contents'></div>");
                         $tab.append($tab_contents);
                     }
                     $tab_contents.append("<div class='tab-content' data-for='" + tabObj.id + "'>" + tabObj.content + "</div>");
-                    var $newTabTitle =
+                    $newTabTitle =
                         $("<div class='tab-title' data-id='" + tabObj.id + "'><span class='title'>" + tabObj.title + "</span></span></div>")
                         .click(function() {
                             activeTab($(this));

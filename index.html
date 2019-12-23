@@ -27,21 +27,21 @@
                     <ul>
                         <li class="node-container node-container-root">
                             <a pid="1" class="node node-root" onclick="page.expand(this)">
-                                <i class="fa fa-cog fa-fw" aria-hidden="true"></i>
-                                <span>系统管理</span>
+                                <i class="fa fa-flag fa-fw" aria-hidden="true"></i>
+                                <span>组件</span>
                                 <b class="expandable fa fa-angle-left" aria-hidden="true"></b>
                             </a>
                             <ul class="node-container-son">
                                 <li>
-                                    <a pid="2" class="node  node-leaf" data-href="icon.html">
-                                        <i class="fa fa-list fa-fw" aria-hidden="true"></i>
-                                        <span>菜单管理</span>
+                                    <a pid="2" class="node  node-leaf" data-href="pages/icon.html">
+                                        <i class="fa fa-drupal fa-fw" aria-hidden="true"></i>
+                                        <span>图标</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="7" class="node node-leaf" data-href="https://www.yokong.com">
+                                    <a pid="7" class="node node-leaf" data-href="pages/buttons.html">
                                         <i class="fa fa-shield fa-fw" aria-hidden="true"></i>
-                                        <span>权限管理</span>
+                                        <span>按钮</span>
                                     </a>
                                 </li>
                                 <li>
@@ -97,29 +97,29 @@
                     <!--内容-->
                     <!--tabs-->
                     <div class="ls-tab-container">
-                        <div class="ls-tab-titles flex">
-                            <div class="tab-title active" data-id="1">
-                                <span class="title">Tab1</span>
-                                <i class="ls-icon ls-icon-close op-close"></i>
+                        <div class="header flex">
+                            <!--left-->
+                            <div class="tab-operate tab-operate-left">
+                                <a class="fa fa-2x fa-angle-double-left"></a>
                             </div>
-                            <div class="tab-title" data-id="2">
-                                <span class="title">Tab2</span>
-                                <i class="ls-icon ls-icon-close op-close"></i>
+                            <!--titles-->
+                            <div class="ls-tab-titles flex">
+                                <div class="tab-title active" data-id="0">
+                                    <span class="title">
+                                        <i class="ls-icon ls-icon-home"></i>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="tab-title" data-id="3">
-                                <span class="title">Tab3</span>
-                                <i class="ls-icon ls-icon-close op-close"></i>
+                            <!--right-->
+                            <div class="tab-operate tab-operate-right">
+                                <a class="fa fa-2x fa-angle-double-right"></a>
+                                <a class="fa fa-2x fa-angle-double-down"></a>
                             </div>
                         </div>
+
                         <div class="ls-tab-contents">
-                            <div class="tab-content active" data-for="1">
-                                Tab1 Content
-                            </div>
-                            <div class="tab-content" data-for="2">
-                                Tab2 Content
-                            </div>
-                            <div class="tab-content" data-for="3">
-                                Tab3 Content
+                            <div class="tab-content active" data-for="0">
+                                <h1>Welcome！</h1>
                             </div>
                         </div>
                     </div>
