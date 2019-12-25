@@ -31,24 +31,45 @@
                                 <span>组件</span>
                                 <b class="expandable fa fa-angle-left" aria-hidden="true"></b>
                             </a>
-                            <ul class="node-container-son">
+                            <ul class="node-container node-container-son">
                                 <li>
-                                    <a pid="2" class="node  node-leaf" data-href="pages/icon.html">
+                                    <a pid="12" class="node node-leaf" data-href="pages/icon.html">
                                         <i class="fa fa-drupal fa-fw" aria-hidden="true"></i>
                                         <span>图标</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="7" class="node node-leaf" data-href="pages/buttons.html">
+                                    <a pid="13" class="node node-leaf" data-href="pages/buttons.html">
                                         <i class="fa fa-shield fa-fw" aria-hidden="true"></i>
                                         <span>按钮</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a pid="12" class="node node-leaf" data-href="">
+                                    <a pid="14" class="node" onclick="page.expand(this)">
                                         <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                                        <span>用户管理</span>
+                                        <span>二级菜单</span>
+                                        <b class="expandable fa fa-angle-left" aria-hidden="true"></b>
                                     </a>
+                                    <ul class="node-container-son node-leaf">
+                                        <li>
+                                            <a pid="141" class="node  node-leaf" data-href="pages/icon.html">
+                                                <i class="fa fa-drupal fa-fw" aria-hidden="true"></i>
+                                                <span>三级菜单1</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a pid="142" class="node node-leaf" data-href="pages/buttons.html">
+                                                <i class="fa fa-shield fa-fw" aria-hidden="true"></i>
+                                                <span>三级菜单2</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a pid="143" class="node node-leaf" data-href="">
+                                                <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                                <span>二级菜单</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a pid="17" class="node node-leaf" data-href="">
@@ -113,7 +134,15 @@
                             <!--right-->
                             <div class="tab-operate tab-operate-right">
                                 <a class="fa fa-2x fa-angle-double-right"></a>
-                                <a class="fa fa-2x fa-angle-double-down"></a>
+                                <a class="fa fa-2x fa-angle-double-down">
+                                    <div class="dropdown-panel">
+                                        <ul>
+                                            <li class="opt" data-opt="refresh">刷新</li>
+                                            <li class="opt" data-opt="closeOthers">关闭其它</li>
+                                            <li class="opt" data-opt="closeAll">全部关闭</li>
+                                        </ul>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 

@@ -12,7 +12,7 @@ var page = page || {};
                 page.mainTab.add({
                     id: $this.attr("pid"),
                     title: $this.find("span").text(),
-                    content: "<iframe scrolling='no' frameborder='0' style='height:100%;width:100%;position:absolute;' src='" + $this.data("href") + "'></iframe>"
+                    content: "<iframe frameborder='0' style='height:100%;width:100%;position:absolute;' src='" + $this.data("href") + "'></iframe>"
                 })
             });
         },
@@ -38,9 +38,8 @@ var page = page || {};
         expand: function(item) {
             var $item = $(item);
             var pid = $item.attr("pid");
-            //debugger
             if ($item.children("b").hasClass('fa-angle-left')) {
-                $item.parent().children("ul").addClass("expanded");
+                $item.next().addClass("expanded");
                 $item.children("b").removeClass('fa-angle-left').addClass('fa-angle-down');
             } else {
                 $item.parent().children("ul").removeClass("expanded");
@@ -101,16 +100,7 @@ var page = page || {};
                 $tabTitle.remove();
                 $tab_contents.find(".tab-content[data-for='" + tabId + "']").remove();
             };
-            //事件绑定 + 
 
-            //点击切换
-            $title.click(function() {
-                activeTab($(this));
-            });
-            //点击关闭
-            $title.find(".op-close").click(function() {
-                removeTab($(this).parent());
-            });
             //tab 对象
             var tab = {
                 /**
@@ -167,9 +157,47 @@ var page = page || {};
                  */
                 remove: function(id) {
                     removeTab($title_container.find(".tab-title[data-id='" + id + "']"));
+                },
+                /**
+                 * 刷新
+                 */
+                refresh: function() {
+                    var $cur_content = $tab.find(".ls-tab-contents .tab-content.active");
+                    var iframe = $cur_content.find("iframe");
+                    if (iframe.length) {
+                        iframe[0].src = iframe[0].src;
+                    }
+                },
+                /**
+                 * 全部关闭
+                 */
+                closeAll: function() {
+                    // $tab.find(".")
+                    console.log('关闭所有');
+                },
+                /**
+                 * 关闭其它
+                 */
+                closeOthers: function() {
+                    // 
+                    console.log('关闭其它');
                 }
-
             };
+
+            //事件绑定 + 
+
+            //点击切换
+            $title.click(function() {
+                activeTab($(this));
+            });
+            //点击关闭
+            $title.find(".op-close").click(function() {
+                removeTab($(this).parent());
+            });
+            //操作
+            $tab.find(".opt").click(function() {
+                tab[$(this).data("opt")]();
+            });
             return tab;
         }
     });
