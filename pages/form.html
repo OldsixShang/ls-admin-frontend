@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>首页-欢迎</title>
+    <link href="../css/ls.admin.css" rel="stylesheet" />
+    <link href="../css/button.css" rel="stylesheet" />
+    <link href="../css/form.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-family: "微软雅黑";
+        }
+        
+        .form-login {
+            display: block;
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid #e6e6e6;
+            padding: 10px;
+            padding-top: 20px;
+        }
+        
+        .ls-form .ls-form-item {
+            margin-bottom: 10px;
+        }
+        
+        .ls-form .ls-form-item input[type='text'],
+        .ls-form .ls-form-item input[type='password'] {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>文本框</h2>
+    <form class="ls-form">
+        <input type="text" placeholder="请输入文本" />
+    </form>
+    <h2>下拉选择框</h2>
+    <form class="ls-form">
+        <select>
+            <option>请选择</option>
+            <option>选择A</option>
+            <option>选择B</option>
+            <option>选择C</option>
+        </select>
+    </form>
+
+    <h2>单选按钮</h2>
+    <form class="ls-form">
+        <label class="radio">
+            <input type="radio" name="name" value="0">选项A
+        </label>
+        <label class="radio">
+            <input type="radio" name="name" value="1">选项B
+        </label>
+        <label class="radio">
+            <input type="radio" name="name" value="2">选项C
+        </label>
+        <label class="radio">
+            <input type="radio" name="name" value="3">选项D
+        </label>
+    </form>
+
+    <h2>多选按钮</h2>
+    <form class="ls-form">
+        <label class="checkbox">
+            <input type="checkbox" value="0">选项A
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="1">选项B
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="2">选项C
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" value="3">选项D
+        </label>
+    </form>
+
+    <h2>登录</h2>
+    <form class="ls-form form-login">
+        <div class="ls-form-item">
+            <input type="text" placeholder="请输入用户名" />
+        </div>
+        <div class="ls-form-item">
+            <input type="password" placeholder="请输入密码" />
+        </div>
+        <div class="ls-form-item">
+            <label class="checkbox">
+                <input type="checkbox" value="3">记住密码
+            </label>
+        </div>
+        <div class="ls-form-item">
+            <button class="btn btn-primary btn-block">登录</button>
+        </div>
+    </form>
+</body>
+
+</html>

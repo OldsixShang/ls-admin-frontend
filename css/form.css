@@ -1,0 +1,15 @@
+.ls-form .checkbox,
+.ls-form .radio {
+    color: #444;
+    font-size: 13px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.ls-form .checkbox input,
+.ls-form .radio input {
+    line-height: 28px;
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+}
