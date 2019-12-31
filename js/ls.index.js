@@ -67,21 +67,17 @@ var page = page || {};
 
                 // 位置调整
                 var pleft = $tab.offset().left + 39;
-                var pright = $tab.offset().left + $tab.width() - 39;
-                //console.log(pleft + ',' + pright + ',' + $tab.width());
+                var pright = $tab.offset().left + $tab.width() - 80;
                 var cleft = $tabTitle.offset().left;
-                var cright = cleft + $tabTitle.width() + 30; //+30  padding:15px;
-                var titlesLeft = $tabTitle.parent().data("left") || 39;
+                var cright = cleft + $tabTitle.width() + 30;
+                var cmgLeft = parseFloat($tabTitle.parent().css("margin-left").replace("px", ""));
 
                 if (cleft < pleft) {
-                    titlesLeft = (titlesLeft + cleft - pleft);
-                    $tabTitle.parent().css("left", titlesLeft + "px");
-                    $tabTitle.parent().attr("data-left", titlesLeft);
+                    cmgLeft = (cmgLeft + pleft - cleft);
+                    $tabTitle.parent().css("margin-left", cmgLeft + "px");
                 } else if (cright > pright) {
-                    //debugger
-                    titlesLeft = (titlesLeft + pright - cright);
-                    $tabTitle.parent().css("left", titlesLeft + "px");
-                    $tabTitle.parent().attr("data-left", titlesLeft);
+                    cmgLeft = (cmgLeft + pright - cright);
+                    $tabTitle.parent().css("margin-left", cmgLeft + "px");
                 }
                 $tab_contents.find(".tab-content[data-for='" + tabId + "']").addClass('active');
             };
@@ -100,6 +96,43 @@ var page = page || {};
                 $tabTitle.remove();
                 $tab_contents.find(".tab-content[data-for='" + tabId + "']").remove();
             };
+            /**
+             * 翻页
+             * @param {页码}} pageIndex 
+             */
+            var changePage = function(diff) {
+                // 容器宽度
+                var cWidth = $('.ls-tab-container').width() - 119;
+                var $firstTitle = $('.ls-tab-titles .tab-title:first'),
+                    $lastTitle = $('.ls-tab-titles .tab-title:last');
+                // 内容宽度
+                var tsWidth = $lastTitle.offset().left -
+                    $firstTitle.offset().left +
+                    $lastTitle.width() + 30;
+                var curPage = $title_container.attr("cur-p");
+
+                // 容器 margin-left 用于计算当前页码
+                var cmgLeft = parseFloat($title_container.css("margin-left").replace("px", ""));
+                curPage = Math.floor(Math.abs(cmgLeft) / cWidth) + 1;
+
+                var totalPage = Math.floor(tsWidth / cWidth) + (tsWidth % cWidth > 0 ? 1 : 0);
+                curPage = curPage + diff;
+                if (curPage >= totalPage) {
+                    curPage = totalPage;
+                    $title_container
+                        .css("margin-left", (1 - totalPage) * cWidth + "px")
+                        .attr("cur-p", totalPage);
+                } else if (curPage <= 1) {
+                    curPage = 1;
+                    $title_container
+                        .css("margin-left", "0px")
+                        .attr("cur-p", "1");
+                } else {
+                    $title_container
+                        .css("margin-left", (1 - curPage) * cWidth + "px")
+                        .attr("cur-p", curPage);
+                }
+            }
 
             //tab 对象
             var tab = {
@@ -134,14 +167,14 @@ var page = page || {};
                         $tab_contents = $("<div class='ls-tab-contents'></div>");
                         $tab.append($tab_contents);
                     }
-                    $tab_contents.append("<div class='tab-content' data-for='" + tabObj.id + "'>" + tabObj.content + "</div>");
+                    $tab_contents.append("<div class='tab-content' closeable='" + tabObj.closable + "' data-for='" + tabObj.id + "'>" + tabObj.content + "</div>");
                     $newTabTitle =
                         $("<div class='tab-title' data-id='" + tabObj.id + "'><span class='title'>" + tabObj.title + "</span></span></div>")
                         .click(function() {
                             activeTab($(this));
                         });
                     if (tabObj.closable) {
-                        $newTabTitle.append(
+                        $newTabTitle.attr("closeable", "true").append(
                             $("<i class='ls-icon ls-icon-close op-close'></i>")
                             .click(function() {
                                 removeTab($(this).parent());
@@ -172,15 +205,31 @@ var page = page || {};
                  * 全部关闭
                  */
                 closeAll: function() {
-                    // $tab.find(".")
                     console.log('关闭所有');
+                    $tab.find(".ls-tab-titles .tab-title[closeable='true']").remove();
+                    $tab.find(".ls-tab-contents .tab-content[closeable='true']").remove();
+                    activeTab($tab.find(".ls-tab-titles .tab-title"));
                 },
                 /**
                  * 关闭其它
                  */
                 closeOthers: function() {
-                    // 
                     console.log('关闭其它');
+                    $tab.find(".ls-tab-titles .tab-title:not(.active)[closeable='true']").remove();
+                    $tab.find(".ls-tab-contents .tab-content:not(.active)[closeable='true']").remove();
+                    activeTab($tab.find(".ls-tab-titles .tab-title.active"));
+                },
+                /**
+                 * 下一页
+                 */
+                nextPage: function() {
+                    changePage(1);
+                },
+                /**
+                 * 上一页
+                 */
+                prePage: function() {
+                    changePage(-1);
                 }
             };
 
@@ -198,8 +247,17 @@ var page = page || {};
             $tab.find(".opt").click(function() {
                 tab[$(this).data("opt")]();
             });
+            // 左滑
+            $tab.find(".opt-left").click(function() {
+                // debugger
+                tab.prePage();
+            });
+            // 右滑
+            $tab.find(".opt-right").click(function() {
+                tab.nextPage();
+            });
             return tab;
         }
     });
     page.init();
-})(jQuery);
+})(jQuery)

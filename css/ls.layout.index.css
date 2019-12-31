@@ -352,7 +352,8 @@
 .ls-tab-container .ls-tab-titles {
     position: absolute;
     left: 39px;
-    right: 39px;
+    right: 78px;
+    overflow: hidden;
     transition: all 300ms ease-in;
     -webkit-transition: all 300ms ease-in;
 }
@@ -483,13 +484,14 @@
     width: 120px;
     right: 0;
     font-size: 13px;
-    transition: top 300ms ease-in, opacity 300ms ease-in;
-    -webkit-transition: top 300ms ease-in, opacity 300ms ease-in;
+    transition: top 200ms ease-in, opacity 200ms ease-in;
+    -webkit-transition: top 200ms ease-in, opacity 200ms ease-in;
     border-radius: 4px;
     top: 46px;
     height: 0;
     opacity: 0;
     overflow: hidden;
+    box-shadow: 0 0 6px rgba(196, 199, 202, .35);
 }
 
 .tab-operate-right .fa:hover .dropdown-panel {
@@ -506,7 +508,7 @@
 }
 
 .tab-operate-right .fa .dropdown-panel ul li {
-    line-height: 38px;
+    line-height: 32px;
 }
 
 .tab-operate-right .fa .dropdown-panel ul li:hover {
