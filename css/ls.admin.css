@@ -89,15 +89,16 @@ input[type='number'],
 input[type='email'],
 select,
 textarea {
+    color: #333;
     background: #fff;
     border-radius: 4px;
-    border: 1px solid #e6e6e6;
+    outline: none;
     font-size: 13px;
     padding: 4px 10px;
     line-height: 1.5;
-    outline: none;
     box-sizing: border-box;
-    color: #333;
+    border: 1px solid #e6e6e6;
+    -webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -109,7 +110,7 @@ input[type='email']:focus,
 select:focus,
 textarea :focus {
     border-color: #1d7ce3;
-    box-shadow: 0 0 0 2px rgba(29, 124, 227, .3);
+    box-shadow: 0 0 0 2px rgba(29, 124, 227, .1);
 }
 
 select option {

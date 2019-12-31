@@ -1,3 +1,13 @@
+.ls-form .ls-form-item {
+    margin-bottom: 10px;
+}
+
+.ls-form .ls-form-item input[type='text'],
+.ls-form .ls-form-item input[type='password'] {
+    display: block;
+    width: 100%;
+}
+
 .ls-form .checkbox,
 .ls-form .radio {
     color: #444;
@@ -12,4 +22,27 @@
     display: inline-block;
     margin-right: 3px;
     vertical-align: middle;
+}
+
+.ls-form input.error {
+    border-color: red;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, .1);
+}
+
+.ls-form label.error {
+    height: 15px;
+    color: red;
+    font-size: 12px;
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    display: block;
+    margin-top: 5px;
+    line-height: 16px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.ls-form label.error.hide {
+    opacity: 0;
+    height: 0;
 }
