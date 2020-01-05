@@ -4,6 +4,48 @@
     font-family: '微软雅黑';
 }
 
+.dropdown-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.dropdown-panel {
+    background: #fff;
+    position: absolute;
+    width: 120px;
+    right: 0;
+    font-size: 13px;
+    transition: top 200ms ease-in, opacity 200ms ease-in;
+    -webkit-transition: top 200ms ease-in, opacity 200ms ease-in;
+    border-radius: 4px;
+    top: 46px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(196, 199, 202, .35);
+}
+
+.dropdown-panel ul li {
+    line-height: 32px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}
+
+.dropdown-panel ul li:hover {
+    background: rgba(238, 238, 238, .6);
+    z-index: 6;
+    cursor: pointer;
+}
+
+.dropdown-panel ul li.split {
+    height: 1px;
+    border: none;
+    background: #e6e6e6;
+    margin: 3px 0;
+}
+
 .ls-layout {
     height: 100vh;
     width: 100vw;
@@ -323,6 +365,44 @@
     line-height: 50px;
 }
 
+.nav-right .opt-user {
+    display: block;
+    padding: 0 10px;
+    position: relative;
+}
+
+.nav-right .opt-user:hover {
+    background: rgba(51, 51, 51, .1);
+    cursor: pointer;
+}
+
+.nav-right .opt-user .dropdown-panel {
+    top: 57px;
+    z-index: 9;
+}
+
+.nav-right .opt-user:hover .dropdown-panel {
+    top: 49px;
+    opacity: 1;
+    height: auto;
+    border: 1px solid rgb(230, 230, 230, .8);
+}
+
+.nav-right .opt-user .avatar {
+    width: 32px;
+    border-radius: 50%;
+    background: #fff;
+    height: 32px;
+    margin: 10px;
+    float: left;
+}
+
+.nav-right .avatar+span {
+    line-height: 50px;
+    color: #fff;
+    margin: 0 6px;
+}
+
 
 /*内容*/
 
@@ -478,41 +558,9 @@
     position: relative;
 }
 
-.tab-operate-right .fa .dropdown-panel {
-    background: #fff;
-    position: absolute;
-    width: 120px;
-    right: 0;
-    font-size: 13px;
-    transition: top 200ms ease-in, opacity 200ms ease-in;
-    -webkit-transition: top 200ms ease-in, opacity 200ms ease-in;
-    border-radius: 4px;
-    top: 46px;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    box-shadow: 0 0 6px rgba(196, 199, 202, .35);
-}
-
 .tab-operate-right .fa:hover .dropdown-panel {
     top: 37px;
     opacity: 1;
     height: auto;
     border: 1px solid rgb(230, 230, 230, .8);
-}
-
-.tab-operate-right .fa .dropdown-panel ul {
-    list-style: none;
-    margin: 0;
-    padding: 5px 0;
-}
-
-.tab-operate-right .fa .dropdown-panel ul li {
-    line-height: 32px;
-}
-
-.tab-operate-right .fa .dropdown-panel ul li:hover {
-    background: rgba(238, 238, 238, .6);
-    z-index: 6;
-    cursor: pointer;
 }
