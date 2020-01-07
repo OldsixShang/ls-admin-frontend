@@ -5,10 +5,6 @@
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     background-color: #fbfbfb;
     border: 1px solid #ddd;
     padding: 5px 10px;
@@ -29,6 +25,11 @@
     background-color: #eee;
 }
 
+.btn:disabled {
+    cursor: not-allowed;
+    background: #f5f5f5;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1d7ce3;
@@ -45,6 +46,10 @@
     color: #fff;
     background-color: #1a68bc;
     background-color: #1a68bc;
+}
+
+.btn-primary:disabled {
+    background: #74b5fc;
 }
 
 .btn-success {
@@ -65,6 +70,10 @@
     border-color: #1d9f3b;
 }
 
+.btn-success:disabled {
+    background: #74e28d;
+}
+
 .btn-danger {
     color: #fff;
     background-color: #eb2a2a;
@@ -81,6 +90,10 @@
     color: #fff;
     background-color: #b92020;
     border-color: #b92020;
+}
+
+.btn-danger:disabled {
+    background: #ee7171;
 }
 
 .btn-warning {
@@ -101,6 +114,10 @@
     background-color: #d6a707;
 }
 
+.btn-warning:disabled {
+    background: #fadc77;
+}
+
 .btn-link {
     color: #1c70cc;
     border-color: transparent;
@@ -114,6 +131,12 @@
 
 .btn-link:active {
     color: #e53c0a;
+}
+
+.btn-link:disabled {
+    /* background: #74b5fc; */
+    background: transparent;
+    color: #92c2f6;
 }
 
 
@@ -145,12 +168,4 @@
 .btn-group .btn {
     margin: 0;
     border: none;
-}
-
-
-/*animate*/
-
-.btn {
-    /* -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
-    /* transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; */
 }
