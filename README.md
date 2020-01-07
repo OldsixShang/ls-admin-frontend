@@ -16,7 +16,7 @@
 - [东拼西凑完成一个后台 ”前端框架“ (2) - 字体图标](https://www.jianshu.com/p/3546b81424a9)
 - [东拼西凑完成一个“前端框架”(3) - 侧边栏 ](https://www.jianshu.com/p/47c6b14ff15b)
 - [东拼西凑完成一个“前端框架”(4) - Tabs页 ](https://www.jianshu.com/p/bcfca9a6dd33)
-
+- [东拼西凑完成一个“前端框架”(5) - Tabs操作](https://www.jianshu.com/p/1ac579bce6ac)
 `一步一步提高自己的前端技术`
 
 `持续更新中...`
