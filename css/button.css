@@ -134,7 +134,6 @@
 }
 
 .btn-link:disabled {
-    /* background: #74b5fc; */
     background: transparent;
     color: #92c2f6;
 }
