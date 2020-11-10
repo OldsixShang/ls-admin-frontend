@@ -8,7 +8,8 @@ var page = page || {};
             // 初始化 tab 栏
             this.mainTab = this.tab('.ls-tab-container');
             $(".node.node-leaf").click(function() {
-                var $this = $(this);
+                $(".node.node-leaf").removeClass("actived");
+                var $this = $(this).addClass("actived");
                 page.mainTab.add({
                     id: $this.attr("pid"),
                     title: $this.find("span").text(),

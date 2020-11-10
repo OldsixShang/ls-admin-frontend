@@ -206,6 +206,13 @@
 .slider-menu ul li .node:hover {
     background: rgba(0, 0, 0, .2);
     color: #fff;
+    box-sizing: border-box;
+}
+
+.slider-menu ul li .node.node-leaf.actived {
+    background: rgba(0, 0, 0, .25);
+    color: #fff;
+    border-left: 2px solid #1d7ce3;
 }
 
 
